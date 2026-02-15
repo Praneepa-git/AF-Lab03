@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Async & Await</h2>
+
+<p id="demo"></p>
+
+<script>
+function wait2(){
+  return new Promise(resolve => {
+    setTimeout(() => resolve("resolved - success"), 2000);
+  });
+}
+
+async function run(){
+  const r = await wait2();
+  document.getElementById("demo").innerHTML = r;
+}
+
+run();
+</script>
+
+</body>
+</html>
